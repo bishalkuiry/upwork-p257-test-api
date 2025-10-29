@@ -58,6 +58,9 @@ src/
    PG_DATABASE_URL=postgres://username:password@localhost:5432/database_name
    ```
 
+   Or rename `dev.env` to `.env`
+      `PG_DATABASE_URL` value replace by your postgres database connection
+
 4. Generate Prisma client:
    ```bash
    npx prisma generate
