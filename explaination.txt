@@ -1,0 +1,41 @@
+
+# Leaderboard Methods Explanation
+
+## Overview
+This document explains the output and behavior of two leaderboard endpoint:
+- `/users/top5/total`
+- `/users/top5/single`
+
+## Endpoint: `/users/top5/total`
+
+### Purpose
+Retrieves the top 5 users based on their cumulative/total points across all their leaderboard entries.
+
+### How it works
+1. Groups leaderboard entries by userId
+2. Sums up all points for each user
+3. Orders users by their total points (descending)
+4. Handles ties by fetching additional users and assigning proper ranks
+5. Returns only the top 5 ranked users
+
+
+## Endpoint: `/users/top5/single`
+
+### Purpose
+Retrieves the top 5 users based on their highest single leaderboard entry (not cumulative).
+
+### How it works
+1. Fetches individual leaderboard entries (not grouped)
+2. Orders by individual point values (descending)
+3. Takes the highest single entries regardless of user
+4. Handles ties by fetching additional entries and assigning proper ranks
+5. Returns only the top 5 ranked entries
+
+
+## Tie Handling
+Both methods implement sophisticated tie handling:
+1. Fetch initial 5 records
+2. Assign ranks (users with same points get same rank)
+3. If rank 5 has ties, fetch more records to include all tied users
+4. Continue until all rank 5 ties are resolved
+5. Filter to return only users with ranks 1-5
