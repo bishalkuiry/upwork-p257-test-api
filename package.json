@@ -1,0 +1,35 @@
+{
+    "author": "Bishal Kuiry",
+    "name": "upwork-p257-test-api",
+    "version": "1.0.0",
+    "devDependencies": {
+        "@eslint/js": "^9.35.0",
+        "@types/body-parser": "^1.19.6",
+        "@types/cors": "^2.8.19",
+        "@types/dateformat": "^5.0.3",
+        "@types/express": "^5.0.3",
+        "@types/node": "^22.7.5",
+        "@types/uuid": "^10.0.0",
+        "eslint": "^9.35.0",
+        "globals": "^16.4.0",
+        "jiti": "^2.5.1",
+        "prettier": "^3.6.2",
+        "tsx": "^4.20.5",
+        "typescript": "^5.6.3",
+        "typescript-eslint": "^8.43.0"
+    },
+    "scripts": {
+        "dev": "nodemon --exec tsx src/index.ts",
+        "start": "node build/index.js",
+        "build": "tsc"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dateformat": "^5.0.3",
+        "dotenv": "^17.2.2",
+        "express": "^5.1.0",
+        "joi": "^18.0.1",
+        "redis": "^5.8.2",
+        "uuid": "^13.0.0"
+    }
+}

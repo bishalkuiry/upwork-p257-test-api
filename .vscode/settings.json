@@ -1,0 +1,5 @@
+{
+    "typescript.disableAutomaticTypeAcquisition": true,
+    "typescript.tsdk": "node_modules\\typescript\\lib",
+    "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+}
