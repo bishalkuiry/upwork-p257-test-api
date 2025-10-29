@@ -86,9 +86,9 @@ src/
       {
             "users": [
                {
-                  "username": {{username}} ## Username is unique
-                  "name": {{name}} ##
-                  "profilePicture": {{Profile Picture}} ##
+                  "username": "{{username}}" // Username is unique
+                  "name": "{{name}}"
+                  "profilePicture": "{{Profile Picture}}"
                }
             ]
       }
@@ -98,8 +98,8 @@ src/
       {
          "points": [
             {
-                  "username": {{username}} ## 
-                  "point": {{Point}} ##
+                  "username": "{{username}}" 
+                  "point": "{{Point}}"
             }
          ]
       }
