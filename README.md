@@ -82,26 +82,30 @@ src/
 ### Users
 
 - `POST /users` - Create multiple users
-        - Request Body 
-            {
-                "users": [
-                    {
-                        "username": {{username}} ## Username is unique
-                        "name": {{name}} ##
-                        "profilePicture": {{Profile Picture}} ##
-                    }
-                ]
-            }
+   ```
+   - Request Body 
+      {
+            "users": [
+               {
+                  "username": {{username}} ## Username is unique
+                  "name": {{name}} ##
+                  "profilePicture": {{Profile Picture}} ##
+               }
+            ]
+      }
+   ```
 - `POST /users/points` - Update user points
-         - Request Body
+   ```
+   - Request Body
+      {
+         "points": [
             {
-               "points": [
-                  {
-                        "username": {{username}} ## 
-                        "point": {{Point}} ##
-                  }
-               ]
+                  "username": {{username}} ## 
+                  "point": {{Point}} ##
             }
+         ]
+      }
+   ```
 - `GET /users/top5/total` - Get top 5 users by total points
 - `GET /users/top5/single` - Get top 5 users by single entry
 
