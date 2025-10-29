@@ -8,8 +8,9 @@ export default class UserRoute {
         this.initializeRoutes();
     }
     private initializeRoutes() {
-        this.router.post("/", UserController.instance.createUsers);
-        this.router.post("/points", UserController.instance.updatePoints);
-        this.router.get("/top5", UserController.instance.getTop5Users);
+        this.router.post("/", UserController.instance.createUsers.bind(UserController.instance));
+        this.router.post("/points", UserController.instance.updatePoints.bind(UserController.instance));
+        this.router.get("/top5/total", UserController.instance.getTop5UsersByTotalPoints.bind(UserController.instance));
+        this.router.get("/top5/single", UserController.instance.getTop5UsersBySingleEntry.bind(UserController.instance));
     }
 }

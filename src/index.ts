@@ -9,12 +9,20 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+//cors middleware
+app.use((req: Request, res: Response, next) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+    next();
+    return null;
+});
+
 // Define import routes
 import UserRoute from "./routes/user.route";
 
 // Use routes
 app.use("/users", UserRoute.instance.router);
-
 
 app.use(async (req: Request, res: Response) => {
     const response: ResponseType = {
@@ -28,3 +36,4 @@ app.use(async (req: Request, res: Response) => {
 app.listen(EnvData.PORT, () => {
     console.log(`Server is running on ${EnvData.URL} in ${EnvData.ENV} mode.`);
 });
+

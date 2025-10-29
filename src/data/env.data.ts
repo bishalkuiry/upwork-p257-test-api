@@ -10,6 +10,8 @@ export default class EnvData {
     static readonly PORT = process.env.PORT ? Number(process.env.PORT) : 3000;
 
     static readonly ENV = process.env.SERVER_ENV ?? "development";
+
+    static readonly PG_DATABASE_URL = process.env.PG_DATABASE_URL ?? "";
     
 }
 

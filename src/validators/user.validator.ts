@@ -15,7 +15,7 @@ export default class UserValidator {
                         "string.min": `"username" should have a minimum length of {#limit}`,
                         "string.max": `"username" should have a maximum length of {#limit}`,
                     }),
-                    fullName: Joi.string().min(2).max(50).required().messages({
+                    name: Joi.string().min(2).max(50).required().messages({
                         "string.base": `"name" should be a type of 'text'`,
                         "string.empty": `"name" cannot be an empty field`,
                         "string.min": `"name" should have a minimum length of {#limit}`,
