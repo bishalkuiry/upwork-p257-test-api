@@ -82,8 +82,7 @@ src/
 ### Users
 
 - `POST /users` - Create multiple users
-   ```
-   - Request Body 
+   ```json
       {
             "users": [
                {
@@ -95,8 +94,7 @@ src/
       }
    ```
 - `POST /users/points` - Update user points
-   ```
-   - Request Body
+   ```json
       {
          "points": [
             {
