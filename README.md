@@ -86,7 +86,7 @@ src/
             {
                 "users": [
                     {
-                        "username": {{username}} ## 
+                        "username": {{username}} ## Username is unique
                         "name": {{name}} ##
                         "profilePicture": {{Profile Picture}} ##
                     }
